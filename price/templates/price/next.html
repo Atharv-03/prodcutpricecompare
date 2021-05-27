@@ -1,0 +1,71 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Product Price Comparison</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'product.css' %}">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+<body>
+  <main>
+    <section class="price-comparison">
+      <div class="price-column">
+        <div class="price-header">
+          <div class="logo">
+            <img src="{% static  'amazon.png' %}" alt="" />
+          </div>
+          <div class="product">
+            <h1>{{a}}</h1>
+          </div>
+          <div class="price">
+            {{b}}
+          </div>
+          <div class="site-name">AMAZON</div>
+          <h1>{{expectA}}</h1>
+          <h1>{{expectA1}}</h1>
+        </div>
+        <div class="divider"></div>
+        <button class="cta"><a href="https://www.amazon.in/{{a}}/s?k={{a}}"> URL For Price</a></button>
+        <div class="divider"></div>
+
+      </div>
+      <div class="price-column">
+        <div class="price-header">
+          <div class="logo">
+            <img src="{% static  'Flipkart.png' %}" alt="" />
+          </div>
+          <div class="product">
+            <h1>{{c}}</h1>
+          </div>
+          <div class="price">
+            {{d}}
+          </div>
+          <div class="site-name">FLIPKART</div>
+          <h1>{{expectF}}</h1>
+        </div>
+        <div class="divider"></div>
+        <button class="cta"><a
+            href="https://www.flipkart.com/search?q={{c}}&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=off&as=off">URL
+            For Price</a></button>
+        <div class="divider"></div>
+      </div>
+      
+
+      </div>
+    </section>
+
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
